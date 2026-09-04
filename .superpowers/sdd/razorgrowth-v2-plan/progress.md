@@ -48,3 +48,5 @@ Resolution: Implement `backend/audit/log.py` as part of Task 5 (Phase 4) setup, 
 ## Task 6 (Phase 6 — Feed Adapters + Counter-Offer): complete (commit 3d14471, 27/27 feed tests + 91/91 full suite, review clean)
 - ACP (JSON-LD schema.org), UCP (flat dict), MCP (tool_result) all parse correctly
 - Counter-offer: min(margin_room, max_discount_pct), None if < 1%, rounded to 2dp
+
+## Task 7 (Phase 7 — Anti-Slop UI): complete (commit e906fc2, npm build passes, 10/10 token coverage)
