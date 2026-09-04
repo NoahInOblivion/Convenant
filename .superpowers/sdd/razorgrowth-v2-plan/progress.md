@@ -29,3 +29,8 @@ Resolution: Implement `backend/audit/log.py` as part of Task 5 (Phase 4) setup, 
 ## Task 2 (Phase 3 — Mandate Chain): complete (commit b285ca7, 12/12 tests, review clean)
 - Full deterministic suite: 52/52 passing in 0.10s (note: 52 not 54 — 12 mandate tests vs planned 14; all required scenarios covered)
 - Ruling: 12 mandate tests cover all required scenarios (sign/verify x3 types, wrong secret, 4 tamper cases, expiry, replay) — no gap in coverage vs spec
+
+## Task 3 (Phase 2 — Buyer Agent + Audit Logger): complete (commit e0d2928, 12/12 LLM tests + 52/52 deterministic, review clean)
+- Architectural assertion: BuyerAgentNode raises AgentToolViolation if forbidden tools injected
+- Tool boundary: BUYER_AGENT_TOOL_NAMES ∩ FORBIDDEN_TOOL_NAMES = ∅ (tested)
+- InMemoryAuditLogger in backend/audit/log.py
