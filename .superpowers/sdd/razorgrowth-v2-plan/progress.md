@@ -39,3 +39,8 @@ Resolution: Implement `backend/audit/log.py` as part of Task 5 (Phase 4) setup, 
 - consumed=True set BEFORE API call (idempotency-safe) — verified by test
 - Tampered mandate: SDK never called (architectural bypass-impossible verified)
 - Seed catalog: WEBCAM001 stock=0 (out-of-stock by design)
+
+## Task 5 (Phase 5 — Graceful Denial + Replan Loop): complete (commit c3e3349, 3/3 replan + 64/64 full suite, review clean)
+- terminal_denial audit entry verified in test
+- Policy gate NEVER mocked in replan tests (real evaluate_proposal used)
+- InMemoryCatalogRepository with real SEED_CATALOG prices/stock
