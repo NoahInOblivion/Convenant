@@ -19,3 +19,9 @@ Resolution: Implement `backend/audit/log.py` as part of Task 5 (Phase 4) setup, 
 
 ## Progress
 
+
+## Task 0 (Phase 0 — Schemas): complete (commit 9e94175, 24 tests, review clean)
+## Task 1 (Phase 1 — Policy Gate): complete (commit 9e94175, 16 tests, review clean)
+- Total deterministic: 40/40 passing in 0.12s
+- Ruling: venv at /home/dhruv/Projects/Quant/razorgrowth-v2/venv — all subsequent commands must use venv python/pip
+- Ruling: pyproject.toml build backend changed to setuptools.build_meta (setuptools.backends.legacy not available) — low cost if wrong, trivially reversible
