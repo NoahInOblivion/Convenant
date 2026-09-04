@@ -25,3 +25,7 @@ Resolution: Implement `backend/audit/log.py` as part of Task 5 (Phase 4) setup, 
 - Total deterministic: 40/40 passing in 0.12s
 - Ruling: venv at /home/dhruv/Projects/Quant/razorgrowth-v2/venv — all subsequent commands must use venv python/pip
 - Ruling: pyproject.toml build backend changed to setuptools.build_meta (setuptools.backends.legacy not available) — low cost if wrong, trivially reversible
+
+## Task 2 (Phase 3 — Mandate Chain): complete (commit b285ca7, 12/12 tests, review clean)
+- Full deterministic suite: 52/52 passing in 0.10s (note: 52 not 54 — 12 mandate tests vs planned 14; all required scenarios covered)
+- Ruling: 12 mandate tests cover all required scenarios (sign/verify x3 types, wrong secret, 4 tamper cases, expiry, replay) — no gap in coverage vs spec
