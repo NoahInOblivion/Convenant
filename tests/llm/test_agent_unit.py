@@ -22,6 +22,7 @@ VALID_PROPOSAL_JSON = '''{
 def make_mock_response(content: str):
     mock = MagicMock()
     mock.content = content
+    mock.tool_calls = []  # Empty list = no tool calls → parse content directly
     return mock
 
 

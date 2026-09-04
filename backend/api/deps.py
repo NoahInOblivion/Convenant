@@ -1,16 +1,14 @@
 """
 FastAPI dependency injection singletons.
-All module-level state initialized once at app startup.
+All module-level state initialized once at app startup via lifespan in main.py.
 """
-from decimal import Decimal
 from backend.config import settings
 from backend.audit.log import InMemoryAuditLogger
 from backend.db.seed_catalog import InMemoryCatalogRepository
 from backend.mandates.chain import MandateChain
 from backend.payments.razorpay_client import RazorpayClient
-from backend.replan.loop import ReplanLoop
 
-# Singletons
+# Singletons — safe to build at import time (no LLM, no network)
 audit_logger = InMemoryAuditLogger()
 catalog = InMemoryCatalogRepository()
 seen_idempotency_keys: set[str] = set()
@@ -28,8 +26,18 @@ razorpay_client = RazorpayClient(
     secret_key=settings.mandate_secret_key,
 )
 
+# BuyerAgentNode singleton — initialized lazily on first request so that
+# OPENAI_API_KEY is guaranteed to be in os.environ (set by lifespan in main.py)
+_buyer_agent = None
+
 
 def get_buyer_agent():
-    """Lazy-initialize BuyerAgentNode (requires OPENAI_API_KEY)."""
-    from backend.agent.node import BuyerAgentNode
-    return BuyerAgentNode(model_name="gpt-4o-mini", temperature=0.3)
+    """
+    Return the singleton BuyerAgentNode.
+    MUST be called after the lifespan startup has set OPENAI_API_KEY in os.environ.
+    """
+    global _buyer_agent
+    if _buyer_agent is None:
+        from backend.agent.node import BuyerAgentNode
+        _buyer_agent = BuyerAgentNode(model_name="gpt-4o-mini", temperature=0.3)
+    return _buyer_agent

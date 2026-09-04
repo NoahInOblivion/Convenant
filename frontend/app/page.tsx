@@ -20,7 +20,7 @@ interface ProposalResult {
 }
 
 export default function HomePage() {
-  const [request, setRequest] = useState('')
+  const [request, setRequest] = useState('I need a mechanical keyboard and an ergonomic mouse under ₹6500')
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<ProposalResult | null>(null)
   const [error, setError] = useState<string | null>(null)
