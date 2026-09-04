@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+
+# SDD scratch
+.superpowers/
+
+# OS
+.DS_Store
+*.swp
