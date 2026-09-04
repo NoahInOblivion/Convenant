@@ -34,3 +34,8 @@ Resolution: Implement `backend/audit/log.py` as part of Task 5 (Phase 4) setup, 
 - Architectural assertion: BuyerAgentNode raises AgentToolViolation if forbidden tools injected
 - Tool boundary: BUYER_AGENT_TOOL_NAMES ∩ FORBIDDEN_TOOL_NAMES = ∅ (tested)
 - InMemoryAuditLogger in backend/audit/log.py
+
+## Task 4 (Phase 4 — Razorpay + MandateGuard): complete (commit 39812bc, 9/9 integration + 52/52 deterministic, review clean)
+- consumed=True set BEFORE API call (idempotency-safe) — verified by test
+- Tampered mandate: SDK never called (architectural bypass-impossible verified)
+- Seed catalog: WEBCAM001 stock=0 (out-of-stock by design)
