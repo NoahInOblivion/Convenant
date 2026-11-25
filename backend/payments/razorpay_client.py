@@ -1,7 +1,7 @@
 import razorpay
 from backend.schemas.mandates import PaymentMandate
 from backend.payments.guard import MandateGuard
-from backend.payments.exceptions import MandateGuardException, PaymentExecutionError
+from backend.payments.exceptions import PaymentExecutionError
 
 
 class RazorpayClient:
@@ -27,7 +27,7 @@ class RazorpayClient:
                     "notes": {
                         "mandate_id": mandate.mandate_id,
                         "cart_mandate_id": mandate.cart_mandate_id,
-                        "session": "razorgrowth-v2",
+                        "session": "covenant",
                     },
                 }
             )

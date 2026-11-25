@@ -4,17 +4,15 @@ Phase 5 integration tests: Re-plan loop + graceful denial.
 - Policy gate and mandate signer are NEVER mocked
 - InMemoryCatalogRepository used for real price/stock checks
 """
-import pytest
 from decimal import Decimal
 from datetime import datetime, timezone
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 
 from backend.schemas.proposals import CartItem, CartProposal
-from backend.schemas.policy import PolicyDecision
 from backend.policy.gate import evaluate_proposal
 from backend.audit.log import InMemoryAuditLogger
 from backend.replan.loop import ReplanLoop, GracefulDenialMessage
-from backend.db.seed_catalog import InMemoryCatalogRepository, SEED_CATALOG
+from backend.db.seed_catalog import InMemoryCatalogRepository
 
 
 SPEND_CAP = Decimal("10000.00")

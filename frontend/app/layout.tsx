@@ -3,7 +3,7 @@ import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RazorGrowth Agent v2',
+  title: 'Covenant',
   description: 'Agentic commerce with cryptographic mandate chain',
 }
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-gray-950 text-gray-100 font-sans">
         <header className="border-b border-gray-800 px-6 py-4 flex items-center gap-6">
           <Link href="/" className="font-mono text-lg text-accent font-medium hover:text-accent-hover">
-            RazorGrowth
+            Covenant
           </Link>
           <nav className="flex gap-4 text-sm text-gray-400">
             <Link href="/" className="hover:text-gray-100">Request</Link>

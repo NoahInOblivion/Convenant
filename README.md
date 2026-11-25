@@ -1,4 +1,4 @@
-# RazorGrowth Agent v2
+# Covenant
 
 An agentic commerce system where an LLM proposes purchases, a deterministic policy gate verifies them, and a cryptographically-signed mandate chain authorises payment — with no path to Razorpay that bypasses any of those steps.
 
@@ -109,7 +109,7 @@ POST /api/feeds/ingest  {"protocol": "acp", "payload": {...}}
 ## Project Structure
 
 ```
-razorgrowth-v2/
+covenant/
 │
 ├── backend/
 │   ├── schemas/          # Pydantic v2 models — CartProposal, mandates, PolicyDecision, AuditLogEntry
@@ -205,7 +205,7 @@ RAZORPAY_KEY_SECRET=...
 # Generate with: python -c "import secrets; print(secrets.token_hex(32))"
 MANDATE_SECRET_KEY=<64-char hex>
 
-DATABASE_URL=postgresql+asyncpg://razorgrowth:razorgrowth@localhost:5432/razorgrowth
+DATABASE_URL=postgresql+asyncpg://covenant:covenant@localhost:5432/covenant
 SPEND_CAP=10000.00
 
 # Mandate TTLs (seconds)

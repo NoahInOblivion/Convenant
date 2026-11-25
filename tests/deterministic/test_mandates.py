@@ -8,7 +8,6 @@ from backend.schemas.mandates import IntentMandate, CartMandate, PaymentMandate
 from backend.mandates.signer import sign_mandate, verify_mandate
 from backend.mandates.exceptions import (
     MandateExpiredError,
-    MandateTamperedError,
     MandateReplayError,
 )
 

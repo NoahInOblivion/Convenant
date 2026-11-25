@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    database_url: str = "postgresql+asyncpg://razorgrowth:razorgrowth@localhost:5432/razorgrowth"
+    database_url: str = "postgresql+asyncpg://covenant:covenant@localhost:5432/covenant"
     openai_api_key: str = ""
     razorpay_key_id: str = ""
     razorpay_key_secret: str = ""

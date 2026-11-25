@@ -1,11 +1,9 @@
 """Policy gate tests — deterministic, zero LLM. 17 cases. Run on every commit."""
-import pytest
 from decimal import Decimal
 from datetime import datetime, timezone
 from unittest.mock import MagicMock
 
 from backend.schemas.proposals import CartItem, CartProposal
-from backend.schemas.policy import PolicyDecision
 from backend.policy.gate import evaluate_proposal
 from backend.policy.catalog_repository import CatalogRepository
 

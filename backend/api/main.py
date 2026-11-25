@@ -1,5 +1,5 @@
 """
-RazorGrowth Agent v2 — FastAPI application entry point.
+Covenant — FastAPI application entry point.
 """
 import os
 from contextlib import asynccontextmanager
@@ -34,7 +34,7 @@ from backend.api.routes.catalog import router as catalog_router
 from backend.api.routes.feeds import router as feeds_router
 
 app = FastAPI(
-    title="RazorGrowth Agent v2",
+    title="Covenant",
     description="Agentic commerce with cryptographic mandate chain and Razorpay integration",
     version="2.0.0",
     lifespan=lifespan,
@@ -56,4 +56,4 @@ app.include_router(feeds_router, prefix="/api", tags=["Feeds"])
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "service": "razorgrowth-v2"}
+    return {"status": "ok", "service": "covenant"}

@@ -1,4 +1,4 @@
-# RazorGrowth Agent v2 — Design Specification
+# Covenant — Design Specification
 
 **Date:** 2026-09-04  
 **Track:** Razorpay AI Buildathon — Track 01: AI Growth & Agentic Commerce  
@@ -8,7 +8,7 @@
 
 ## 1. System Purpose
 
-RazorGrowth Agent v2 is an agentic commerce system where an LLM-powered Buyer Agent proposes purchases in natural language, but all financial decisions flow through a deterministic, cryptographically-signed chain of mandates before any Razorpay API call is made. The system is designed for auditability, tamper-evidence, and graceful failure — not just the happy path.
+Covenant is an agentic commerce system where an LLM-powered Buyer Agent proposes purchases in natural language, but all financial decisions flow through a deterministic, cryptographically-signed chain of mandates before any Razorpay API call is made. The system is designed for auditability, tamper-evidence, and graceful failure — not just the happy path.
 
 The pitch narrative centers on the **rejection → re-plan → approval** scenario (Phase 5), showing the signed mandate chain viewer and immutable audit log as first-class UI elements.
 

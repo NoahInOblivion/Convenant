@@ -2,7 +2,6 @@
 MandateChain: builds and validates the full Intent -> Cart -> Payment chain.
 """
 import uuid
-from decimal import Decimal
 from datetime import datetime, timezone, timedelta
 
 from backend.schemas.proposals import CartProposal, CartItem

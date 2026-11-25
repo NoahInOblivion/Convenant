@@ -3,8 +3,6 @@ POST /api/propose — submit a natural language purchase request.
 Full flow: BuyerAgent → PolicyGate → MandateChain → (optionally) RazorpayClient
 """
 import uuid
-from decimal import Decimal
-from datetime import datetime, timezone
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 

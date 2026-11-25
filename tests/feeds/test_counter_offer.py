@@ -1,7 +1,6 @@
 """
 Counter-offer calculator tests — deterministic, pure function.
 """
-import pytest
 from decimal import Decimal
 
 from backend.feeds.counter_offer import calculate_counter_offer

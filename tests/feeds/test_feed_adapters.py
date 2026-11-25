@@ -6,7 +6,6 @@ import pytest
 from decimal import Decimal
 
 from backend.feeds.adapters import adapt_acp, adapt_ucp, adapt_mcp, adapt_feed, FeedAdapterError
-from backend.feeds.normalized import NormalizedProduct
 
 
 # ── ACP ──────────────────────────────────────────────────────────────────

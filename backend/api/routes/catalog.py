@@ -1,6 +1,5 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from backend.api.deps import catalog
 from backend.db.seed_catalog import SEED_CATALOG
 
 router = APIRouter()
